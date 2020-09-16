@@ -7,7 +7,7 @@ import { MensajesService } from './mensajes/mensajes.service';
 import { Mensaje } from './mensajes/entities/mensaje.entity';
 
 @Module({
-  imports: [TypeOrmModule.forRoot(), TypeOrmModule.forFeature(Mensaje)],
+  imports: [TypeOrmModule.forRoot(), TypeOrmModule.forFeature([Mensaje])],
   controllers: [AppController, MensajesController],
   providers: [AppService, MensajesService],
 })
